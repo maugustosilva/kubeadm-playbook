@@ -14,6 +14,7 @@ full_kube_reinstall: True
 
 # Desired kubernetes_version, e.g. 'v1.6.1'  ; when not defined, defaults to: 'latest'
 # kubernetes_version: latest
+kubernetes_version: v1.6.1
 
 # Any kubeadm init extra params can be put here. The var must exist, even if it's empty.
 # e.g. for using flannel, one must put: --pod-network-cidr='10.244.0.0/16'
