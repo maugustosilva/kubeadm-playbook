@@ -135,7 +135,7 @@
   lineinfile:
     dest: /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
     insertafter: '^Environment=\"KUBELET_AUTHZ_ARGS'
-    line: 'Environment="KUBELET_EXTRA_ARGS=--cgroup-driver=systemd"'
+    line: 'Environment="KUBELET_EXTRA_ARGS=--cgroup-driver=systemd --feature-gates=DynamicKubeletConfig --feature-gates=StreamingProxyRedirects=true"'
   notify:
   - Reload systemd
   - Restart kubelet
